@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Wheels</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">🚗 Wheels</a>
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="bookings.html">My Bookings</a>
+                    <a href="profile.html">Profile</a>
+                    <button class="btn btn-secondary btn-small" id="logout-btn">Logout</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">My Profile</h1>
+
+            <div id="error-message"></div>
+            <div id="success-message"></div>
+
+            <div class="profile-section">
+                <h2>Profile Information</h2>
+                <div id="profile-info" class="profile-info">
+                    <div id="loading-profile" class="loading active">
+                        <div class="spinner"></div>
+                        <p>Loading profile...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-section">
+                <h2>Update Profile</h2>
+                <form id="update-profile-form">
+                    <div class="form-group">
+                        <label for="update-name">Full Name</label>
+                        <input type="text" id="update-name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="update-email">Email</label>
+                        <input type="email" id="update-email" placeholder="Enter your email" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="update-phone">Phone Number</label>
+                        <input type="tel" id="update-phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="update-btn">
+                        Update Profile
+                    </button>
+                </form>
+            </div>
+
+            <div class="profile-section">
+                <h2>My Favorite Cars</h2>
+                <div id="loading-favorites" class="loading active">
+                    <div class="spinner"></div>
+                    <p>Loading favorites...</p>
+                </div>
+                <div id="favorites-grid" class="favorites-grid"></div>
+                <div id="favorites-empty" class="empty-state" style="display: none;">
+                    <div class="empty-state-icon">⭐</div>
+                    <p class="empty-state-text">You don't have any favorite cars yet.</p>
+                    <a href="index.html" class="btn btn-primary" style="margin-top: 1rem;">Browse Cars</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>

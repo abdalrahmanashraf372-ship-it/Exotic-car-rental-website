@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheels - Premium Car Rental</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">🚗 Wheels</a>
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="bookings.html">My Bookings</a>
+                    <a href="profile.html">Profile</a>
+                    <button class="btn btn-secondary btn-small" id="logout-btn">Logout</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">Available Cars</h1>
+
+            <div id="error-message"></div>
+            <div id="success-message"></div>
+
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>Loading cars...</p>
+            </div>
+
+            <div id="car-grid" class="car-grid"></div>
+
+            <div id="empty-state" class="empty-state" style="display: none;">
+                <div class="empty-state-icon">🚗</div>
+                <p class="empty-state-text">No cars available at the moment.</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Book Your Car</h2>
+                <button class="modal-close" id="close-modal">&times;</button>
+            </div>
+
+            <div id="modal-car-info"></div>
+
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="start-date">Start Date</label>
+                    <input type="date" id="start-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="end-date">End Date</label>
+                    <input type="date" id="end-date" required>
+                </div>
+                <div id="price-preview" style="margin-top: 1rem; padding: 1rem; background-color: var(--bg-color); border-radius: 0.5rem;">
+                    <strong>Estimated Total:</strong> <span id="total-price">$0</span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="cancel-booking">Cancel</button>
+                    <button type="submit" class="btn btn-primary" id="confirm-booking">Confirm Booking</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

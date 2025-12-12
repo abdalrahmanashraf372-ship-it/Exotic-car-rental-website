@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings - Wheels</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">🚗 Wheels</a>
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="bookings.html">My Bookings</a>
+                    <a href="profile.html">Profile</a>
+                    <button class="btn btn-secondary btn-small" id="logout-btn">Logout</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">My Bookings</h1>
+
+            <div id="error-message"></div>
+            <div id="success-message"></div>
+
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>Loading bookings...</p>
+            </div>
+
+            <div id="bookings-grid" class="booking-grid"></div>
+
+            <div id="empty-state" class="empty-state" style="display: none;">
+                <div class="empty-state-icon">📋</div>
+                <p class="empty-state-text">You don't have any bookings yet.</p>
+                <a href="index.html" class="btn btn-primary" style="margin-top: 1rem;">Browse Cars</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/bookings.js"></script>
+</body>
+</html>
